@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izakaya Connect - Local Matchmaking Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50 shadow-sm transition-all">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="bg-red-600 text-white p-2 rounded-xl shadow-md shadow-red-100">
+                    <i data-lucide="beer" class="w-5 h-5"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900">Izakaya<span class="text-red-600">Connect</span></span>
+            </div>
+            
+            <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
+                <button 
+                    id="tab-en-btn"
+                    onclick="switchLanguage('en')" 
+                    class="px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 bg-white text-slate-900 shadow-sm"
+                >
+                    For Travelers
+                </button>
+                <button 
+                    id="tab-ja-btn"
+                    onclick="switchLanguage('ja')" 
+                    class="px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 text-slate-500 hover:text-slate-900"
+                >
+                    日本人ガイド募集
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="section-en" class="block app-section">
+        
+        <section class="relative bg-slate-950 text-white overflow-hidden py-20 lg:py-32">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(220,38,38,0.15),transparent_50%)]"></div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
+                <span class="inline-flex items-center gap-1.5 bg-red-500/10 border border-red-500/30 text-red-400 text-xs px-3 py-1 rounded-full font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> Authentic Tokyo & Osaka Nightlife
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Unlock Japan’s Deepest <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Izakaya Culture</span> with a Local Friend
+                </h1>
+                <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    Discover hidden, retro drinking alleys. No English menu? Confusing customs? No problem. A friendly local peer will guide you through the real Japanese izakaya experience.
+                </p>
+                <div class="pt-4">
+                    <button onclick="triggerCTA('Traveler Registration')" class="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-red-950/50 hover:shadow-xl transition-all inline-flex items-center gap-2 text-base">
+                        Find a Local Guide Now <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto px-4 py-16 md:py-24 space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Why Choose Izakaya Connect?</h2>
+                <p class="text-sm text-slate-500">Skip tourist traps and dive into the real local atmosphere.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-600">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">True Local Alleys</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Go where Japanese office workers unwind after a long day. Experience deep "Red-Lantern" retro bars that aren't on typical travel blogs.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
+                        <i data-lucide="languages" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">No Language Barrier</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Your guide will help you order deep delicacies and seamlessly handle Japanese dining customs like "Otoshi" (compulsory small appetizer table charge).
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Free Guiding Mind</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Our guides are locals volunteering to practice language and share their culture. You only need to cover their food and drinks during the session!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-100 border-y border-slate-200 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center space-y-2 mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Transparent & Affordable Pricing</h2>
+                    <p class="text-sm text-slate-500">Simple system fee + actual food costs.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-md p-6 md:p-10 max-w-xl mx-auto space-y-6">
+                    <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Platform Booking Fee</h4>
+                            <p class="text-xs text-slate-400">Paid securely in advance per matching session</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-3xl font-extrabold text-red-600">$20.00</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-start pb-4 border-b border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">On-site Food & Drinks</h4>
+                            <p class="text-xs text-slate-400">Pay directly to the Izakaya (covers both you and your guide)</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-slate-800">Actual Cost</span>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Approx. ¥3,000 - ¥5,000<br>(~$20 - $32 USD) / person</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-4 text-xs text-slate-500 space-y-2">
+                        <div class="flex gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span>Each matching session covers up to <strong>3 hours</strong> and <strong>2 Izakaya venues</strong>.</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span>Guides never abuse the rule. Strict internal budget guidelines protect you from over-ordering.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="section-ja" class="hidden app-section">
+        
+        <section class="relative bg-slate-950 text-white overflow-hidden py-20 lg:py-32">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.15),transparent_50%)]"></div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
+                <span class="inline-flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs px-3 py-1 rounded-full font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> 英語アウトプットの実践の場
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    英語の「勉強」はもう終わり。<br>居酒屋で、<span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">生きた外国語</span>を話そう！
+                </h1>
+                <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    「留学する予算や時間はないけれど、外国人の友達が欲しい」「自分の英語力を試したい」そんなあなたのためのマッチングプラットフォーム。上級者じゃなくて全然OK！話したいマインド、学生さん大歓迎です。
+                </p>
+                <div class="pt-4">
+                    <button onclick="triggerCTA('Guide Registration')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-950/50 hover:shadow-xl transition-all inline-flex items-center gap-2 text-base">
+                        かんたん1分！ボランティア登録する <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto px-4 py-16 md:py-24 space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">私たちが「英語学習中」のあなたを歓迎する理由</h2>
+                <p class="text-sm text-slate-500">完璧な英語よりも、日本のカルチャーを紹介したい優しさが価値になります。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">完璧な英語はいりません</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        外国人観光客が求めているのは、流暢なペラペラ英語ではなく「ローカルなお店へ連れて行ってくれる親切さ」です。スマホの翻訳アプリを使いながら手探りで伝える会話こそ、旅の最高の思い出になります。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600">
+                        <i data-lucide="wallet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">あなたの飲食自己負担はゼロ</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        当日のあなたの飲食代は、外国人ゲストが全額支払ってくれます。実質0円で、約3時間の「超実践的なリアル英会話・国際交流」のチャンスが手に入ります。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">18歳以上なら学生も大歓迎</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        18歳以上の成人であれば（高校生は除く）、大学生や専門学生の方も大歓迎です！お酒が飲めなくても「ソフトドリンク専門の居酒屋ガイド」として問題なくご活動いただけます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-100 border-y border-slate-200 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center space-y-2 mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">面接なしでも安心・安全への徹底した取り組み</h2>
+                    <p class="text-sm text-slate-500">運営チームと強力なシステムが、あなたのボランティア活動を守ります。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 text-center space-y-2">
+                        <div class="text-emerald-600 font-bold text-sm flex justify-center items-center gap-1">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i> 身分証による本人確認
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">面倒な面接はありません。公的指定身分証の提出・登録情報との照合を運営が厳重に確認・許可するオンライン審査制です。</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 text-center space-y-2">
+                        <div class="text-emerald-600 font-bold text-sm flex justify-center items-center gap-1">
+                            <i data-lucide="star" class="w-4 h-4"></i> 相互レビュー評価制度
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">ガイドとゲストが相互に評価し合う仕組みを導入。マナー違反やトラブルの多い外国人ユーザーは自動的に即アカウント停止措置となります。</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 text-center space-y-2">
+                        <div class="text-emerald-600 font-bold text-sm flex justify-center items-center gap-1">
+                            <i data-lucide="alert-triangle" class="w-4 h-4"></i> トラブル防止規定
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">「1回3時間・2軒まで」「ガイド側注文の乱用防止・金額上限設定」など、お酒の席ならではのトラブルを防ぐ細かなルールが完備されています。</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 max-w-xl mx-auto bg-white rounded-2xl border border-slate-200 p-6 space-y-4">
+                    <h4 class="font-bold text-slate-900 text-center text-sm">活動スタートまでの流れ</h4>
+                    <div class="space-y-3 text-xs text-slate-600">
+                        <div class="flex items-center gap-3 bg-slate-50 p-2.5 rounded-lg">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center">1</span>
+                            <span>登録フォームから身分証と、英語力の自己申告（簡単な目安）を送信</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-50 p-2.5 rounded-lg">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center">2</span>
+                            <span>運営事務局にて書類確認（最短当日〜2営業日以内に審査完了）</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-50 p-2.5 rounded-lg">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center">3</span>
+                            <span>専用マイページから、マッチングリクエストを受信して居酒屋へGO！</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-slate-950 text-slate-600 border-t border-slate-900 py-8 text-center text-xs">
+        <p>© 2026 Izakaya Connect. All rights reserved. <br class="block sm:hidden"> 18歳未満（高校生不可）の方はガイド登録できません。</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Language toggle mechanism
+        function switchLanguage(lang) {
+            const sectionEn = document.getElementById('section-en');
+            const sectionJa = document.getElementById('section-ja');
+            const tabEnBtn = document.getElementById('tab-en-btn');
+            const tabJaBtn = document.getElementById('tab-ja-btn');
+
+            if (lang === 'en') {
+                sectionEn.classList.remove('hidden');
+                sectionJa.classList.add('hidden');
+                
+                // Active style for EN tab
+                tabEnBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 bg-white text-slate-900 shadow-sm";
+                tabJaBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 text-slate-500 hover:text-slate-900";
+            } else {
+                sectionEn.classList.add('hidden');
+                sectionJa.classList.remove('hidden');
+                
+                // Active style for JA tab
+                tabJaBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 bg-white text-slate-900 shadow-sm";
+                tabEnBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 text-slate-500 hover:text-slate-900";
+            }
+        }
+
+        // Mock conversion handler for testing marketing conversions
+        function triggerCTA(actionName) {
+            alert(`【テストマーケティング用確認】\n「${actionName}」ボタンがクリックされました！\n\n本番環境では、ここにGoogleアナリティクスや広告のコンバージョンタグ（計測スクリプト）を埋め込むことで、「どれだけの人が本当に登録したいと思ったか」を正確にデータ収集・分析できます。`);
+        }
+    </script>
+</body>
+</html>
