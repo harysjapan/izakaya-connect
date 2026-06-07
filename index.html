@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- ========================================== -->
-    <!-- 1. Googleアナリティクス (gtag.js) の設置場所 -->
-    <!-- ========================================== -->
-    <!-- ⚠️注意: 下記の 'G-XXXXXXXXXX' を、あなた自身のGoogleアナリティクスの「測定ID」に書き換えてください -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVHWDYJCCW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,8 +10,6 @@
         // 基本の設定
         gtag('config', 'G-JVHWDYJCCW');
     </script>
-    <!-- ========================================== -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izakaya Connect - Local Matchmaking Service</title>
@@ -38,7 +32,6 @@
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased overflow-x-hidden">
 
-    <!-- HEADER -->
     <header class="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-lg transition-all">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-2">
@@ -67,10 +60,8 @@
         </div>
     </header>
 
-    <!-- ================= FOR TRAVELERS SECTION (EN) ================= -->
     <div id="section-en" class="block app-section">
         
-        <!-- HERO SECTION -->
         <section class="relative text-white overflow-hidden py-16 md:py-24">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(220,38,38,0.25),transparent_50%)]"></div>
             <div class="absolute -top-40 -left-40 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
@@ -94,14 +85,12 @@
             </div>
         </section>
 
-        <!-- VISUAL STORY CAROUSEL SECTION -->
         <section class="max-w-5xl mx-auto px-4 py-12">
             <div class="bg-slate-950 rounded-3xl border border-slate-800 p-6 md:p-10 shadow-2xl relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-br from-red-950/20 via-transparent to-slate-950/50 pointer-events-none"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
-                    <!-- Left: Interactive Slide Selector and Info -->
                     <div class="lg:col-span-5 space-y-6">
                         <div class="space-y-2">
                             <span class="text-red-500 text-xs font-bold uppercase tracking-wider">How It Works</span>
@@ -111,7 +100,6 @@
                             </p>
                         </div>
 
-                        <!-- Steps Buttons -->
                         <div class="space-y-3">
                             <button onclick="setStorySlide('en', 1)" id="slide-en-btn-1" class="w-full text-left p-4 rounded-xl border border-red-500/40 bg-red-950/20 transition-all duration-300 flex gap-4 items-start">
                                 <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
@@ -139,15 +127,12 @@
                         </div>
                     </div>
 
-                    <!-- Right: Large Dynamic Display Image and Text Overlay -->
                     <div class="lg:col-span-7 flex flex-col justify-between h-full">
                         <div class="bg-slate-900 rounded-2xl border border-slate-800 p-3 overflow-hidden shadow-2xl relative group">
-                            <!-- Image Container -->
                             <div class="aspect-[4/3] rounded-xl overflow-hidden relative bg-black">
                                 <img id="story-en-img" src="story-alley.png" onerror="handleImageError(this, 'Discovery')" alt="Traveler exploring Japan alleys" class="w-full h-full object-cover transition-all duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                                 
-                                <!-- Dynamic Subtitle over Image -->
                                 <div class="absolute bottom-0 left-0 right-0 p-6 space-y-2">
                                     <div class="flex items-center gap-2">
                                         <span id="story-en-badge" class="bg-red-600 text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">THE DILEMMA</span>
@@ -162,7 +147,6 @@
                             </div>
                         </div>
                         
-                        <!-- Navigation indicators -->
                         <div class="flex justify-center gap-1.5 mt-4">
                             <span id="dot-en-1" class="w-8 h-1.5 rounded-full bg-red-600 transition-all"></span>
                             <span id="dot-en-2" class="w-3 h-1.5 rounded-full bg-slate-800 transition-all"></span>
@@ -174,7 +158,6 @@
             </div>
         </section>
 
-        <!-- DELICIOUS FOOD GRID INTRO SECTION -->
         <section class="max-w-5xl mx-auto px-4 py-16">
             <div class="bg-slate-950/50 border border-slate-800 rounded-3xl p-6 md:p-12 space-y-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -204,7 +187,6 @@
             </div>
         </section>
 
-        <!-- WHY CHOOSE SECTION -->
         <section class="max-w-5xl mx-auto px-4 py-16 space-y-12 relative">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(220,38,38,0.05),transparent_40%)]"></div>
             
@@ -244,7 +226,6 @@
             </div>
         </section>
 
-        <!-- PRICING SECTION -->
         <section class="bg-slate-950 border-y border-slate-800 py-16 md:py-24">
             <div class="max-w-4xl mx-auto px-4">
                 <div class="text-center space-y-2 mb-12">
@@ -291,10 +272,8 @@
         </section>
     </div>
 
-    <!-- ================= FOR JAPANESE GUIDES SECTION (JA) ================= -->
     <div id="section-ja" class="hidden app-section">
         
-        <!-- HERO SECTION -->
         <section class="relative text-white overflow-hidden py-16 md:py-24">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.2),transparent_50%)]"></div>
             <div class="absolute -top-40 -left-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl"></div>
@@ -317,14 +296,12 @@
             </div>
         </section>
 
-        <!-- VISUAL STORY CAROUSEL SECTION (JA) -->
         <section class="max-w-5xl mx-auto px-4 py-12">
             <div class="bg-slate-950 rounded-3xl border border-slate-800 p-6 md:p-10 shadow-2xl relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/20 via-transparent to-slate-950/50 pointer-events-none"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
-                    <!-- Left: Interactive Slide Selector and Info -->
                     <div class="lg:col-span-5 space-y-6">
                         <div class="space-y-2">
                             <span class="text-emerald-500 text-xs font-bold uppercase tracking-wider">How It Works</span>
@@ -334,7 +311,6 @@
                             </p>
                         </div>
 
-                        <!-- Steps Buttons -->
                         <div class="space-y-3">
                             <button onclick="setStorySlide('ja', 1)" id="slide-ja-btn-1" class="w-full text-left p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/20 transition-all duration-300 flex gap-4 items-start">
                                 <span class="bg-emerald-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
@@ -362,15 +338,12 @@
                         </div>
                     </div>
 
-                    <!-- Right: Large Dynamic Display Image and Text Overlay -->
                     <div class="lg:col-span-7 flex flex-col justify-between h-full">
                         <div class="bg-slate-900 rounded-2xl border border-slate-800 p-3 overflow-hidden shadow-2xl relative group">
-                            <!-- Image Container -->
                             <div class="aspect-[4/3] rounded-xl overflow-hidden relative bg-black">
                                 <img id="story-ja-img" src="story-alley.png" onerror="handleImageError(this, 'Discovery')" alt="Traveler exploring Japan alleys" class="w-full h-full object-cover transition-all duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                                 
-                                <!-- Dynamic Subtitle over Image -->
                                 <div class="absolute bottom-0 left-0 right-0 p-6 space-y-2">
                                     <div class="flex items-center gap-2">
                                         <span id="story-ja-badge" class="bg-emerald-600 text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">彼らの課題</span>
@@ -385,7 +358,6 @@
                             </div>
                         </div>
                         
-                        <!-- Navigation indicators -->
                         <div class="flex justify-center gap-1.5 mt-4">
                             <span id="dot-ja-1" class="w-8 h-1.5 rounded-full bg-emerald-600 transition-all"></span>
                             <span id="dot-ja-2" class="w-3 h-1.5 rounded-full bg-slate-800 transition-all"></span>
@@ -397,7 +369,6 @@
             </div>
         </section>
 
-        <!-- DELICIOUS FOOD GRID INTRO SECTION (JA) -->
         <section class="max-w-5xl mx-auto px-4 py-16">
             <div class="bg-slate-950/50 border border-slate-800 rounded-3xl p-6 md:p-12 space-y-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -427,7 +398,6 @@
             </div>
         </section>
 
-        <!-- WHY CHOOSE SECTION (JA) -->
         <section class="max-w-5xl mx-auto px-4 py-16 space-y-12">
             <div class="text-center space-y-2">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white">英語学習中のあなたを、歓迎する理由</h2>
@@ -450,221 +420,31 @@
                     </div>
                     <h3 class="font-extrabold text-lg text-white">あなたの飲食費自己負担はゼロ</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        ガイド時の飲食費用はすべて外国人ユーザーが負担します。費用負担を気にする必要なく、数時間の実践的なリアル英語アウトプット環境を手に入れられます。
+                        ガイド時の飲食費用はすべて外国人旅行客が負担するルールです。実質無料で、日本にいながら「生きた英語を数時間話し続ける環境」を手に入れることができます。
                     </p>
                 </div>
                 <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-xl">
                     <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
-                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-extrabold text-lg text-white">18歳以上（学生可）から大歓迎</h3>
+                    <h3 class="font-extrabold text-lg text-white">安心のサポート体制</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        お酒が苦手・飲めない方でも「ソフトドリンク専門ガイド」として問題なく活動できます。若手の社会人から専門学生・大学生まで大歓迎です。（高校生は不可）
+                        旅行客は全員身分証確認と事前決済を必須としています。また、トラブル防止のための明確な禁止事項ガイドラインを用意しているので、安心して参加できます。
                     </p>
                 </div>
             </div>
         </section>
-
-        <!-- SECURITY & TRUST SECTION -->
-        <section class="bg-slate-950 border-y border-slate-800 py-16 md:py-24">
-            <div class="max-w-4xl mx-auto px-4">
-                <div class="text-center space-y-2 mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">面接なしでも安心・安全な仕組み</h2>
-                    <p class="text-slate-400 text-sm">システムとコミュニティ運営が、あなたのボランティア活動を守ります。</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                    <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center space-y-3 shadow-lg">
-                        <div class="text-emerald-500 font-extrabold text-sm flex justify-center items-center gap-1.5">
-                            <i data-lucide="shield-check" class="w-4 h-4"></i> 身分証による本人確認
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">事前の対面面接は不要ですが、厳重な本人確認書類の提出を必須化。信頼性の担保された外国人ゲストのみマッチングされます。</p>
-                    </div>
-                    <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center space-y-3 shadow-lg">
-                        <div class="text-emerald-500 font-extrabold text-sm flex justify-center items-center gap-1.5">
-                            <i data-lucide="star" class="w-4 h-4"></i> 相互評価レビュー
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">活動後に相互評価を記入。迷惑行為やマナー違反の評価があった旅行客のアカウントは自動的に即停止される健全な仕組みです。</p>
-                    </div>
-                    <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center space-y-3 shadow-lg">
-                        <div class="text-emerald-500 font-extrabold text-sm flex justify-center items-center gap-1.5">
-                            <i data-lucide="alert-triangle" class="w-4 h-4"></i> トラブル防止規定
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">「1回3時間、2軒まで」「ガイド側注文上限の設定」など、アルコールトラブルを未然に防ぐクリアな約束事を定めています。</p>
-                    </div>
-                </div>
-
-                <div class="mt-12 max-w-xl mx-auto bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 space-y-6 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-emerald-950/10 to-transparent pointer-events-none"></div>
-                    <h4 class="font-bold text-white text-center text-sm relative z-10">活動スタートまでのステップ</h4>
-                    <div class="space-y-3 text-xs text-slate-300 relative z-10">
-                        <div class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-850">
-                            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center shrink-0">1</span>
-                            <span>登録フォームから身分証をアップロード＆かんたんプロフィール送信</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-850">
-                            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center shrink-0">2</span>
-                            <span>事務局にてオンライン審査（書類確認は最短当日〜2営業日で完了）</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-850">
-                            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center shrink-0">3</span>
-                            <span>マイページ開設後、あなたに届くマッチングリクエストを承認して居酒屋へ！</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-500 border-t border-slate-900 py-12 text-center text-xs space-y-3">
-        <p class="max-w-md mx-auto px-4 leading-relaxed">
-            © 2026 Izakaya Connect. All rights reserved. <br class="block sm:hidden">
-            18歳未満の方、および高校生の方はガイド登録・ご利用いただけません。
-        </p>
-        <p class="text-[10px] text-slate-600">Testing Environment Site - Form integrations and database operations are simplified for marketing preview.</p>
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 text-xs py-8 text-center">
+        <p>&copy; 2026 Izakaya Connect. All rights reserved.</p>
     </footer>
 
-    <!-- INTERACTION LOGIC SCRIPT -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Story Data Setup
-        const storySlides = {
-            1: {
-                image: "story-alley.png",
-                fallbackKey: "Discovery",
-                badgeEn: "THE DILEMMA",
-                badgeJa: "彼らの課題",
-                titleEn: "“Cozy red lanterns call out, but Japanese-only signs make stepping in alone difficult.”",
-                titleJa: "「魅力的な赤提灯に惹かれるものの、日本語だけの看板が一人で入るのをためらわせます。」",
-                subEn: "Many travelers dream of tasting local dishes, but retro back-allies feel heavily locked behind language barriers.",
-                subJa: "ローカルで美味しいご飯を楽しみたい旅行客はたくさんいますが、日本語のみの世界は一歩入るのに高いハードルがあります。"
-            },
-            2: {
-                image: "story-menu.png",
-                fallbackKey: "Barrier",
-                badgeEn: "THE BARRIER",
-                badgeJa: "高い障壁",
-                titleEn: "“No English translations, hand-written menus, and the local staff speak no English.”",
-                titleJa: "「店内のメニューは手書きの日本語。そしてお店の主人も外国語が一切通じません。」",
-                subEn: "Trying to decode Japanese-only culinary choices like 'Otoshi' appetizer charges makes ordering feel completely intimidating.",
-                subJa: "お通しの料金システムや日本酒の種類を読み解くのは至難の業。美味しそうな匂いがするのに、不安が勝ってしまいます。"
-            },
-            3: {
-                image: "story-fun.png",
-                fallbackKey: "Solution",
-                badgeEn: "THE SOLUTION",
-                badgeJa: "解決策！",
-                titleEn: "“A friendly local buddy bridges the world, translating plates and sharing authentic laughs!”",
-                titleJa: "「英語を話したい日本人の仲間がサポートするだけで、不安は笑顔と乾杯に変わります！」",
-                subEn: "Your companion handles orders and guides custom rules, unlocking priceless stories and direct cultural friendships.",
-                subJa: "お通しのルールや本日のおすすめの説明、全てローカルのバディが仲介。最高にディープな一夜と実戦的な英語環境がここに！"
-            }
-        };
-
-        // State Variables for Auto-slide Carousel
-        const activeSlides = {
-            en: 1,
-            ja: 1
-        };
-        let storyIntervalId = null;
-
-        // Internal rendering function without touching the timer state
-        function renderStorySlide(lang, slideNum) {
-            const imgEl = document.getElementById(`story-${lang}-img`);
-            const badgeEl = document.getElementById(`story-${lang}-badge`);
-            const descEnEl = document.getElementById(`story-${lang}-desc-en`);
-            const descJaEl = document.getElementById(`story-${lang}-desc-ja`);
-            
-            // Apply Fade Transition effect
-            imgEl.style.opacity = 0.3;
-            
-            setTimeout(() => {
-                const data = storySlides[slideNum];
-                
-                // Reset custom error data attribute so error handler can fire again if needed
-                imgEl.removeAttribute('data-error-handled');
-                imgEl.src = data.image;
-                imgEl.alt = `Izakaya Connect Story Step ${slideNum}`;
-                
-                // Bind dynamic fallback metadata to handling function in case it fails next
-                imgEl.setAttribute('data-fallback-key', data.fallbackKey);
-                
-                if (lang === 'en') {
-                    badgeEl.innerText = data.badgeEn;
-                    descEnEl.innerText = data.titleEn;
-                    descJaEl.innerText = data.subEn;
-                } else {
-                    badgeEl.innerText = data.badgeJa;
-                    descJaEl.innerText = data.titleJa;
-                    descEnEl.innerText = data.subJa;
-                }
-                
-                imgEl.style.opacity = 1;
-            }, 250);
-
-            // Update Left Selection buttons
-            for (let i = 1; i <= 3; i++) {
-                const btn = document.getElementById(`slide-${lang}-btn-${i}`);
-                const span = btn.querySelector('span');
-                const h4 = btn.querySelector('h4');
-                const p = btn.querySelector('p');
-                const dot = document.getElementById(`dot-${lang}-${i}`);
-
-                if (i === slideNum) {
-                    // Active Styles
-                    btn.className = `w-full text-left p-4 rounded-xl border ${lang === 'en' ? 'border-red-500/40 bg-red-950/20' : 'border-emerald-500/40 bg-emerald-950/20'} transition-all duration-300 flex gap-4 items-start`;
-                    span.className = `${lang === 'en' ? 'bg-red-600' : 'bg-emerald-600'} text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`;
-                    h4.className = "font-bold text-white text-sm";
-                    p.className = "text-xs text-slate-300 mt-1";
-                    
-                    dot.className = `w-8 h-1.5 rounded-full ${lang === 'en' ? 'bg-red-600' : 'bg-emerald-600'} transition-all`;
-                } else {
-                    // Inactive Styles
-                    btn.className = "w-full text-left p-4 rounded-xl border border-slate-800 hover:border-slate-700 bg-slate-900/50 transition-all duration-300 flex gap-4 items-start";
-                    span.className = "bg-slate-800 text-slate-400 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5";
-                    h4.className = "font-bold text-slate-500 text-sm";
-                    p.className = "text-xs text-slate-600 mt-1";
-                    
-                    dot.className = "w-3 h-1.5 rounded-full bg-slate-800 transition-all";
-                }
-            }
-        }
-
-        // Active State Controller for Story Carousel (Called on manual clicks)
-        function setStorySlide(lang, slideNum) {
-            activeSlides[lang] = slideNum;
-            renderStorySlide(lang, slideNum);
-            
-            // User manually interacted - reset automatic slide timer
-            startAutoSlideTimer();
-        }
-
-        // Start Automatic Carousel Timer (5 seconds interval)
-        function startAutoSlideTimer() {
-            stopAutoSlideTimer();
-            storyIntervalId = setInterval(() => {
-                // Determine current visible language section
-                const isJaActive = !document.getElementById('section-ja').classList.contains('hidden');
-                const lang = isJaActive ? 'ja' : 'en';
-                
-                // Move to next slide (1 -> 2 -> 3 -> 1)
-                activeSlides[lang] = (activeSlides[lang] % 3) + 1;
-                renderStorySlide(lang, activeSlides[lang]);
-            }, 5000);
-        }
-
-        // Stop Automatic Carousel Timer
-        function stopAutoSlideTimer() {
-            if (storyIntervalId) {
-                clearInterval(storyIntervalId);
-            }
-        }
-
-        // Language toggle mechanism
+        // Language Switching Logic
         function switchLanguage(lang) {
             const sectionEn = document.getElementById('section-en');
             const sectionJa = document.getElementById('section-ja');
@@ -677,73 +457,45 @@
                 
                 tabEnBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 bg-red-600 text-white shadow-md shadow-red-900/20";
                 tabJaBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white";
-                
-                // Reset slide view
-                setStorySlide('en', 1);
             } else {
                 sectionEn.classList.add('hidden');
                 sectionJa.classList.remove('hidden');
                 
                 tabJaBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 bg-emerald-600 text-white shadow-md shadow-emerald-900/20";
                 tabEnBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white";
-                
-                // Reset slide view
-                setStorySlide('ja', 1);
             }
         }
 
-        // Robust Image Error Fallback Handler
-        function handleImageError(imageElement, type) {
-            if (imageElement.getAttribute('data-error-handled') === 'true') return;
-            imageElement.setAttribute('data-error-handled', 'true');
-
-            const activeFallback = imageElement.getAttribute('data-fallback-key') || type;
-            let fallbackSvg = '';
-
-            if (activeFallback === 'Discovery') {
-                fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" style="background:%230f172a;"><rect width="400" height="300" fill="%230f172a"/><g transform="translate(140, 70)"><circle cx="60" cy="60" r="50" fill="none" stroke="%23ef4444" stroke-width="4" stroke-dasharray="10 5"/><path d="M 60,10 L 60,110 M 10,60 L 110,60" stroke="%23ef4444" stroke-width="2" stroke-dasharray="4 4"/><circle cx="60" cy="60" r="8" fill="%23f59e0b"/><text x="60" y="140" fill="%2394a3b8" font-family="sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Step 1: Finding Cozy Alleys</text></g></svg>`;
-            } else if (activeFallback === 'Barrier') {
-                fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" style="background:%230f172a;"><rect width="400" height="300" fill="%230f172a"/><g transform="translate(140, 70)"><path d="M 30,20 L 90,20 L 90,90 L 30,90 Z" fill="none" stroke="%23ef4444" stroke-width="3"/><text x="60" y="55" fill="%23ef4444" font-family="sans-serif" font-size="28" text-anchor="middle" font-weight="black">?</text><path d="M 15,100 L 105,100" stroke="%23b91c1c" stroke-width="4"/><text x="60" y="140" fill="%2394a3b8" font-family="sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Step 2: Language Obstacles</text></g></svg>`;
-            } else if (activeFallback === 'Solution') {
-                fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" style="background:%230f172a;"><rect width="400" height="300" fill="%230f172a"/><g transform="translate(140, 70)"><circle cx="35" cy="50" r="15" fill="%2310b981"/><circle cx="85" cy="50" r="15" fill="%233b82f6"/><path d="M 35,75 Q 60,95 85,75" fill="none" stroke="%2310b981" stroke-width="4" stroke-linecap="round"/><text x="60" y="140" fill="%2394a3b8" font-family="sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Step 3: Fun Connection!</text></g></svg>`;
-            } else if (activeFallback === 'Genres') {
-                fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" style="background:%230f172a;"><rect width="600" height="400" fill="%230f172a"/><g transform="translate(200, 140)"><rect width="200" height="100" rx="15" fill="none" stroke="%2338bdf8" stroke-width="2" stroke-dasharray="8 4"/><text x="100" y="45" fill="%2338bdf8" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">6 Izakaya Food Genres</text><text x="100" y="70" fill="%2364748b" font-family="sans-serif" font-size="11" text-anchor="middle">Yakitori, Sushi, Ramen, etc.</text></g></svg>`;
-            } else {
-                fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" style="background:%231e293b;"><rect width="400" height="300" fill="%231e293b"/><text x="200" y="150" fill="%2364748b" font-family="sans-serif" font-size="14" text-anchor="middle">Image Not Found</text></svg>`;
-            }
-
-            imageElement.src = fallbackSvg;
-        }
-
-        // ==========================================
-        // 2. Googleアナリティクス連動用の新システム
-        // ==========================================
+        // --- 今回修正した計測用イベントハンドラー ---
         function triggerCTA(actionName) {
-            // (1) Googleアナリティクスにクリックイベントを送信
-            if (typeof gtag !== 'undefined') {
+            // 1. Googleアナリティクス (gtag) が読み込まれているか確認してイベント送信
+            if (typeof gtag === 'function') {
                 gtag('event', 'click_cta', {
-                    'event_category': 'Engagement',
+                    'event_category': 'conversion_test',
                     'event_label': actionName
                 });
             }
 
-            // (2) 英語併記＆サービス開始予定を含んだポップアップ
-            const message = `📢 【Izakaya Connect - Announcement / お知らせ】\n\n` + 
-                            `🇺🇸 English:\n` +
-                            `Thank you for clicking "${actionName}"! Our official matching service is launching very soon. We are preparing hard to connect amazing travelers with local Japanese buddies. Stay tuned!\n\n` +
-                            `🇯🇵 日本語:\n` +
-                            `「${actionName}」ボタンをクリックしていただきありがとうございます！当サービスは【近日開始予定】です。外国人旅行客と日本人ガイドが安全・快適に出会えるよう、現在リリースに向けて最終準備を行っております。サービス開始を楽しみにお待ちください！\n\n` +
-                            `-------------------------------------------\n` +
-                            `📊 [GA4 Tracking Data / データ解析状況]:\n` +
-                            `This click event ("click_cta") has been sent to Google Analytics in real-time. / このクリック行動はGA4にリアルタイムで正確に記録されています。`;
-            
-            alert(message);
+            // 2. ユーザーへのテストマーケティング案内ポップアップ
+            alert(`【テストマーケティング用確認】\n「${actionName}」ボタンがクリックされました！\n\n本番環境では、ここにメールアドレス登録や公式LINE連携のフォームなどを設置することで、実際のサービス開始時の顧客リスト（見込み客）を最大化させることができます。`);
         }
 
-        // Start slide rotation after window loading is fully completed
-        window.addEventListener('load', () => {
-            startAutoSlideTimer();
-        });
-    </script>
-</body>
-</html>
+        // Visual Carousel Data & Logic
+        const storyData = {
+            en: {
+                1: { badge: "THE DILEMMA", en: "“Cozy red lanterns call out, but Japanese-only signs make stepping in alone difficult.”", ja: "「魅力的な赤提灯に惹かれるものの、日本語だけの看板が一人で入るのをためらわせます。」", img: "1.居酒屋めぐり.png" },
+                2: { badge: "THE BARRIER", en: "“No English menus, and local owners who cannot speak foreign languages.”", ja: "「英語メニューもなく、店主とも言葉が通じないため、注文のハードルが非常に高いです。」", img: "2.メニューに困惑.png" },
+                3: { badge: "THE SOLUTION", en: "“A local companion guides you smoothly, creating priceless cultural memories.”", ja: "「現地の友人が間に入ることでスムーズに注文でき、最高の夜の思い出が生まれます。」", img: "3.焼き鳥談笑.png" }
+            },
+            ja: {
+                1: { badge: "彼らの課題", ja: "「日本のディープな居酒屋街。憧れはあるけれど、外国語が通じない空間はハードルが高い。」", en: "\"Beautiful local alleys, yet almost impossible for tourists to deeply navigate on their own.\"", img: "1.居酒屋めぐり.png" },
+                2: { badge: "言葉の壁", ja: "「英語メニューがなく、お店の人も英語が話せないため、外国人だけでは注文すら困難です。」", en: "\"No English support available, making simple ordering a stressful task for travelers.\"", img: "2.メニューに困惑.png" },
+                3: { badge: "最高の解決策", ja: "「あなたが言葉と文化を少しサポートしてあげるだけで、お互いにとって忘れられない乾杯になります！」", en: "\"Your presence breaks the ice, turning an ordinary dinner into an unforgettable friendship!\"", img: "3.焼き鳥談笑.png" }
+            }
+        };
+
+        function setStorySlide(lang, slideNum) {
+            const data = storyData[lang][slideNum];
+            
+            const imgEl = document.getElementById(`story-${lang}-img`);
+            const badgeEl = document.getElementById(`story-${
