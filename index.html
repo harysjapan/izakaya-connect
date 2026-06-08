@@ -77,17 +77,20 @@
                 <p class="text-slate-300 text-base md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
                     No English menu? Confusing customs? No problem. A friendly local peer will guide you through the real, hidden back-alley bars that tourists never find.
                 </p>
-                <div class="pt-6">
+                <div class="pt-6 space-y-3">
                     <button onclick="triggerCTA('Traveler Registration')" class="bg-red-600 hover:bg-red-500 text-white font-extrabold px-10 py-5 rounded-2xl shadow-xl shadow-red-950/60 hover:shadow-red-500/30 transform hover:-translate-y-0.5 transition-all inline-flex items-center gap-3 text-lg">
                         Find a Local Guide Now <i data-lucide="arrow-right" class="w-6 h-6"></i>
                     </button>
+                    <p class="text-xs text-slate-400 font-medium">
+                        *Platform matching fee is <strong class="text-red-400">$20 per session</strong>. For pricing details, please <a href="#pricing-section" class="text-red-500 underline hover:text-red-400">see below</a>.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="max-w-5xl mx-auto px-4 py-12">
             <div class="bg-slate-950 rounded-3xl border border-slate-800 p-6 md:p-10 shadow-2xl relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-br from-red-950/20 via-transparent to-slate-950/50 pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-red-950/20 via-transparent canvas-to-slate-950/50 pointer-events-none"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
@@ -226,7 +229,7 @@
             </div>
         </section>
 
-        <section class="bg-slate-950 border-y border-slate-800 py-16 md:py-24">
+        <section id="pricing-section" class="bg-slate-950 border-y border-slate-800 py-16 md:py-24">
             <div class="max-w-4xl mx-auto px-4">
                 <div class="text-center space-y-2 mb-12">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white">Transparent & Affordable Pricing</h2>
@@ -436,8 +439,18 @@
         </section>
     </div>
 
-    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 text-xs py-8 text-center">
-        <p>&copy; 2026 Izakaya Connect. All rights reserved.</p>
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 text-xs py-12 text-center space-y-6">
+        <div class="max-w-2xl mx-auto px-4 text-left border border-slate-850 bg-slate-900/30 rounded-xl p-5 space-y-3 text-[11px] leading-relaxed">
+            <div id="footer-privacy-en" class="space-y-1">
+                <p class="font-bold text-slate-400 text-xs mb-1">🔒 Privacy & Data Protection</p>
+                <p>Your personal information submitted via Calendly or Google Forms is securely stored and processed strictly for matchmaking and safety verification purposes. We never sell or share your data with unauthorized third parties.</p>
+            </div>
+            <div id="footer-privacy-ja" class="space-y-1">
+                <p class="font-bold text-slate-400 text-xs mb-1">🔒 個人情報の取り扱いについて</p>
+                <p>CalendlyおよびGoogleフォームを通じてご登録いただいた個人情報は、マッチング時の本人確認および安全な運用のための連絡以外には一切使用いたしません。法令に基づく場合を除き、第三者に開示・提供することはありません。</p>
+            </div>
+        </div>
+        <p class="pt-4">&copy; 2026 Izakaya Connect. All rights reserved.</p>
     </footer>
 
     <script>
@@ -450,25 +463,29 @@
             const sectionJa = document.getElementById('section-ja');
             const tabEnBtn = document.getElementById('tab-en-btn');
             const tabJaBtn = document.getElementById('tab-ja-btn');
+            const privacyEn = document.getElementById('footer-privacy-en');
+            const privacyJa = document.getElementById('footer-privacy-ja');
 
             if (lang === 'en') {
-                // English Display
                 sectionEn.classList.remove('hidden');
                 sectionEn.classList.add('block');
                 sectionJa.classList.remove('block');
                 sectionJa.classList.add('hidden');
                 
-                // Tab Button Styles (English active - Red)
+                privacyEn.classList.remove('hidden');
+                privacyJa.classList.add('hidden');
+                
                 tabEnBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 bg-red-600 text-white shadow-md shadow-red-900/20";
                 tabJaBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white";
             } else if (lang === 'ja') {
-                // Japanese Display
                 sectionJa.classList.remove('hidden');
                 sectionJa.classList.add('block');
                 sectionEn.classList.remove('block');
                 sectionEn.classList.add('hidden');
                 
-                // Tab Button Styles (Japanese active - Emerald Green)
+                privacyJa.classList.remove('hidden');
+                privacyEn.classList.add('hidden');
+                
                 tabJaBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 bg-emerald-600 text-white shadow-md shadow-emerald-900/20";
                 tabEnBtn.className = "px-4 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white";
             }
@@ -476,14 +493,10 @@
 
         // Automatic Language Detection Rule on Load
         window.addEventListener('DOMContentLoaded', () => {
-            // Get user's primary browser language (e.g., 'ja', 'en-US', 'en')
             const userLang = navigator.language || navigator.userLanguage;
-            
             if (userLang.startsWith('ja')) {
-                // If browser language is Japanese, show Guide page
                 switchLanguage('ja');
             } else {
-                // Default for English and all other languages, show Traveler page
                 switchLanguage('en');
             }
         });
@@ -492,19 +505,15 @@
         function triggerCTA(actionName) {
             console.log(`CTA Clicked: ${actionName}`);
 
-            // GA4のイベント送信
             if (typeof gtag === 'function') {
                 gtag('event', 'click_cta', { 'cta_name': actionName });
             }
 
             if (actionName === 'Traveler Registration') {
-                // ご提示いただいた外国者向けのCalendlyのURLをセットしました
                 window.open('https://calendly.com/shosei-harahara/izakaya-connect-traveler-registration', '_blank');
             } else if (actionName === 'Guide Registration') {
-                // ご提示いただいた日本人ガイド向けのGoogleフォームURLをセットしました
                 window.open('https://docs.google.com/forms/d/e/1FAIpQLScGJGdEKPRJ1L2_SSadWijKWAiu1rLIL92Cie8Z2Ft2wefwWA/viewform?usp=publish-editor', '_blank');
             } else {
-                // その他の暫定ボタン用のアラート
                 alert(`【確認】「${actionName}」ボタンがクリックされました！`);
             }
         }
@@ -527,26 +536,22 @@
             const index = stepIndex - 1;
             const data = storyData[lang][index];
             
-            // Elements
             const imgEl = document.getElementById(`story-${lang}-img`);
             const badgeEl = document.getElementById(`story-${lang}-badge`);
             const descEnEl = document.getElementById(`story-${lang}-desc-en`);
             const descJaEl = document.getElementById(`story-${lang}-desc-ja`);
             
-            // Animation reset
             const container = imgEl.parentElement;
             container.classList.remove('story-fade-in');
-            void container.offsetWidth; // Trigger reflow
+            void container.offsetWidth;
             container.classList.add('story-fade-in');
 
-            // Update content
             imgEl.src = data.img;
             imgEl.onerror = () => handleImageError(imgEl, data.tag);
             badgeEl.innerText = data.badge;
             if (descEnEl) descEnEl.innerText = data.descEn;
             if (descJaEl) descJaEl.innerText = data.descJa;
 
-            // Update Button and Dot Active Styles
             for (let i = 1; i <= 3; i++) {
                 const btn = document.getElementById(`slide-${lang}-btn-${i}`);
                 const dot = document.getElementById(`dot-${lang}-i`);
