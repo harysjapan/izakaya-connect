@@ -68,7 +68,7 @@
             
             <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
                 <span class="inline-flex items-center gap-1.5 bg-red-500/10 border border-red-500/30 text-red-400 text-xs px-4 py-1.5 rounded-full font-bold uppercase tracking-wider">
-                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Authentic Tokyo & Osaka Nightlife
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Authentic Tokyo & Osaka Nightlife ・ Just $20 Flat Matching Fee
                 </span>
                 <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
                     Unlock Japan’s Deepest <br>
@@ -488,9 +488,25 @@
             }
         });
 
-        // Mock conversion handler for testing marketing conversions
+        // 登録フォームへのリダイレクトと計測用のハンドラー
         function triggerCTA(actionName) {
-            alert(`【テストマーケティング用確認】\n「${actionName}」ボタンがクリックされました！\n\n本番環境では、ここにGoogleアナリティクスや広告のコンバージョンタグ（計測スクリプト）を埋め込むことで、「どれだけの人が本当に登録したいと思ったか」を正確にデータ収集・分析できます。`);
+            console.log(`CTA Clicked: ${actionName}`);
+
+            // GA4のイベント送信
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_cta', { 'cta_name': actionName });
+            }
+
+            if (actionName === 'Traveler Registration') {
+                // ご提示いただいた外国者向けのCalendlyのURLをセットしました
+                window.open('https://calendly.com/shosei-harahara/izakaya-connect-traveler-registration', '_blank');
+            } else if (actionName === 'Guide Registration') {
+                // ご提示いただいた日本人ガイド向けのGoogleフォームURLをセットしました
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScGJGdEKPRJ1L2_SSadWijKWAiu1rLIL92Cie8Z2Ft2wefwWA/viewform?usp=publish-editor', '_blank');
+            } else {
+                // その他の暫定ボタン用のアラート
+                alert(`【確認】「${actionName}」ボタンがクリックされました！`);
+            }
         }
 
         // Story Slider Data and Logic
