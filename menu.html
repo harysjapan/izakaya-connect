@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izakaya Menu & Drink Guide - Izakaya Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body { font-family: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif; scroll-behavior: smooth; }
+        .lang-en { color: #f8fafc; } /* text-slate-50 */
+        .lang-ja { color: #94a3b8; font-size: 0.875rem; } /* text-slate-400, text-sm */
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+
+    <header class="bg-slate-950 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="logo-izakaya.png" alt="Izakaya Connect Logo" class="h-9 w-auto object-contain">
+                <span class="text-xl font-black tracking-tight text-white">Izakaya<span class="text-red-500">Connect</span></span>
+            </div>
+            <a href="index.html" class="text-sm font-bold text-slate-400 hover:text-white transition-all">
+                &larr; Back to Home / 戻る
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-20">
+        
+        <div class="text-center space-y-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                Deep Izakaya Menu Guide
+            </h1>
+            <h2 class="text-xl text-emerald-400 font-bold">居酒屋メニューガイド</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mt-4">
+                <span class="block mb-2 text-white">Explore the authentic taste of Japan. Use this guide to order and enjoy like a local!</span>
+                日本のリアルな味を探求しましょう。このガイドを使って、日本人のようにお酒と料理を楽しんでください！
+            </p>
+        </div>
+
+        <section class="space-y-8">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-amber-500">1. Live & Entertaining / ライブ感・エンタメ系</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden group">
+                    <img src="menu-okonomiyaki.png" alt="Okonomiyaki" onerror="this.src='https://placehold.co/600x400/1e293b/94a3b8?text=Okonomiyaki'" class="w-full h-48 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-bold text-white">Okonomiyaki & Monjayaki <span class="block text-sm text-emerald-400 mt-1">お好み焼き＆もんじゃ焼き</span></h3>
+                        <div class="space-y-2">
+                            <p class="lang-en"><strong>What it is:</strong> Savory Japanese pancakes and runny batter cooked right in front of you on a tabletop iron griddle.</p>
+                            <p class="lang-ja"> 卓上の鉄板で自分たちで焼く、具沢山のしょっぱいパンケーキや、とろとろの生地の鉄板焼き。</p>
+                        </div>
+                        <div class="space-y-2 bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <p class="lang-en text-amber-400 text-sm"><strong>How to eat:</strong> Use the small metal spatula (kote) to cut it and eat directly from the hot griddle!</p>
+                            <p class="lang-ja text-amber-500/80"><strong>食べ方：</strong> 小さな金属のヘラ（コテ）を使って切り分けて食べましょう！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden group">
+                    <img src="menu-hamayaki.png" alt="Tabletop Seafood BBQ" onerror="this.src='https://placehold.co/600x400/1e293b/94a3b8?text=Hamayaki'" class="w-full h-48 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-bold text-white">Hamayaki (Tabletop Seafood) <span class="block text-sm text-emerald-400 mt-1">卓上での浜焼き</span></h3>
+                        <div class="space-y-2">
+                            <p class="lang-en"><strong>What it is:</strong> Fresh scallops, turban shells, and crab miso grilled on a small personal net at your table.</p>
+                            <p class="lang-ja"><strong>とは：</strong> 新鮮なホタテやサザエ、カニ味噌などを、テーブルの上の小さな網で焼く海鮮バーベキュー。</p>
+                        </div>
+                        <div class="space-y-2 bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <p class="lang-en text-amber-400 text-sm"><strong>How to eat:</strong> Watch it bubble! Add a few drops of soy sauce when the shell opens, and eat while hot.</p>
+                            <p class="lang-ja text-amber-500/80"><strong>食べ方：</strong> 貝が開いてグツグツしたら、醤油を数滴たらして熱いうちに食べます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-8">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-amber-500">2. Skewers & Classics / 串もの・定番ローカル系</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <img src="menu-yakitori.png" alt="Yakitori" onerror="this.src='https://placehold.co/400x300/1e293b/94a3b8?text=Yakitori'" class="w-full h-40 object-cover">
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Yakitori <span class="block text-xs text-emerald-400 mt-1">焼き鳥</span></h3>
+                        <p class="lang-en text-sm">Charcoal-grilled chicken skewers. Try unique parts like hearts or gizzards!</p>
+                        <p class="lang-ja text-xs">炭火で焼いた鶏の串焼き。ハツや砂肝などの珍しい部位にも挑戦！</p>
+                        <div class="mt-2 text-xs border-t border-slate-800 pt-2">
+                            <span class="text-amber-400 block mb-1"><strong>How to eat:</strong> Eat directly from the bamboo skewer.</span>
+                            <span class="text-slate-400 block"><strong>食べ方：</strong> 竹串から直接かぶりつくのが一番美味しいです。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <img src="menu-kushikatsu.png" alt="Kushikatsu" onerror="this.src='https://placehold.co/400x300/1e293b/94a3b8?text=Kushikatsu'" class="w-full h-40 object-cover">
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Kushikatsu <span class="block text-xs text-emerald-400 mt-1">串カツ</span></h3>
+                        <p class="lang-en text-sm">Deep-fried meat and vegetable skewers with a crispy golden batter.</p>
+                        <p class="lang-ja text-xs">肉や野菜を細かいパン粉でサクッと揚げた串揚げ。</p>
+                        <div class="mt-2 text-xs border-t border-slate-800 pt-2">
+                            <span class="text-amber-400 block mb-1"><strong>How to eat:</strong> NO double-dipping in the communal sauce pan!</span>
+                            <span class="text-slate-400 block"><strong>食べ方：</strong> 共有のソースパンへの「二度漬け」は絶対に禁止です！</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <img src="menu-dashimaki.png" alt="Dashimaki Tamago" onerror="this.src='https://placehold.co/400x300/1e293b/94a3b8?text=Dashimaki'" class="w-full h-40 object-cover">
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Dashimaki Tamago <span class="block text-xs text-emerald-400 mt-1">だし巻き卵</span></h3>
+                        <p class="lang-en text-sm">A rolled omelet made with Japanese soup stock (dashi). Very fluffy and juicy.</p>
+                        <p class="lang-ja text-xs">出汁をたっぷり含ませて何層にも巻いた、フワフワでジューシーな卵焼き。</p>
+                        <div class="mt-2 text-xs border-t border-slate-800 pt-2">
+                            <span class="text-amber-400 block mb-1"><strong>How to eat:</strong> Add a bit of grated radish and soy sauce.</span>
+                            <span class="text-slate-400 block"><strong>食べ方：</strong> 添えられた大根おろしに少し醤油を垂らして乗せて食べます。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-8">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-amber-500">3. Deep & Adventurous / ディープ・挑戦系</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <img src="menu-motsu.png" alt="Motsu-nikomi" onerror="this.src='https://placehold.co/400x300/1e293b/94a3b8?text=Motsu-nikomi'" class="w-full h-40 object-cover">
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Motsu-nikomi <span class="block text-xs text-emerald-400 mt-1">もつ煮込み</span></h3>
+                        <p class="lang-en text-sm">Pork or beef intestines stewed until melt-in-your-mouth soft with miso or soy sauce.</p>
+                        <p class="lang-ja text-xs">豚や牛の内臓を、味噌や醤油でホロホロになるまで煮込んだ赤提灯の魂。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <img src="menu-oden.png" alt="Oden" onerror="this.src='https://placehold.co/400x300/1e293b/94a3b8?text=Oden'" class="w-full h-40 object-cover">
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Oden <span class="block text-xs text-emerald-400 mt-1">おでん</span></h3>
+                        <p class="lang-en text-sm">Various ingredients like radish, fish cakes, and eggs simmered in a light soy-flavored dashi broth.</p>
+                        <p class="lang-ja text-xs">大根や練り物、卵などを出汁でじっくり煮込んだ鍋料理。お好みでからしをつけて食べます。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <img src="menu-takowasa.png" alt="Tako-wasa" onerror="this.src='https://placehold.co/400x300/1e293b/94a3b8?text=Tako-wasa'" class="w-full h-40 object-cover">
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Tako-wasa / Ume-suisho <span class="block text-xs text-emerald-400 mt-1">タコわさ・梅水晶</span></h3>
+                        <p class="lang-en text-sm">Raw octopus with spicy wasabi, or crunchy shark cartilage with sour plum. The ultimate drink snacks.</p>
+                        <p class="lang-ja text-xs">生のタコのワサビ和えや、サメの軟骨の梅肉和え。食感を楽しむ究極のお酒のアテ。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-8">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-amber-500">4. The "Shime" Culture / 〆（シメ）の文化</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex items-center gap-6">
+                    <img src="menu-onigiri.png" alt="Yaki-onigiri" onerror="this.src='https://placehold.co/200x200/1e293b/94a3b8?text=Yaki-onigiri'" class="w-32 h-32 rounded-xl object-cover shrink-0">
+                    <div class="space-y-2">
+                        <h3 class="text-lg font-bold text-white">Yaki-onigiri <span class="block text-xs text-emerald-400 mt-1">焼きおにぎり</span></h3>
+                        <p class="lang-en text-sm">A rice ball coated in soy sauce and grilled until crispy on the outside. A perfect savory finish.</p>
+                        <p class="lang-ja text-xs">醤油を塗って表面をカリッと香ばしく焼いたおにぎり。飲んだ後に最高です。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex items-center gap-6">
+                    <img src="menu-ochazuke.png" alt="Ochazuke" onerror="this.src='https://placehold.co/200x200/1e293b/94a3b8?text=Ochazuke'" class="w-32 h-32 rounded-xl object-cover shrink-0">
+                    <div class="space-y-2">
+                        <h3 class="text-lg font-bold text-white">Ochazuke <span class="block text-xs text-emerald-400 mt-1">お茶漬け</span></h3>
+                        <p class="lang-en text-sm">A bowl of rice topped with savory ingredients, with hot green tea or dashi broth poured over it.</p>
+                        <p class="lang-ja text-xs">ご飯の上に具材を乗せ、温かいお茶や出汁をかけた、胃に優しい〆の一品。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-8 pt-10">
+            <div class="border-b border-slate-800 pb-4 text-center">
+                <h2 class="text-3xl font-bold text-sky-400">Japanese Alcohol Guide</h2>
+                <h3 class="text-lg text-slate-400 mt-2">日本のお酒ガイド</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <img src="drink-beer.png" alt="Draft Beer" onerror="this.src='https://placehold.co/200x200/0f172a/38bdf8?text=Nama+Beer'" class="w-32 h-32 rounded-full object-cover shrink-0 border-4 border-slate-800">
+                    <div class="space-y-3 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-white">Nama Beer (Draft Beer) <span class="block text-sm text-sky-400 mt-1">生ビール</span></h3>
+                        <p class="lang-en">Always the first drink! Japanese draft beer is famous for its crisp taste and perfect, creamy foam head.</p>
+                        <p class="lang-ja">「とりあえず生！」でおなじみ。日本のビールはキレがあり、クリーミーな泡が特徴です。</p>
+                        <p class="text-xs text-amber-400 mt-2 font-bold tracking-wider">How to order: "Toriaezu, Nama!" (I'll start with a draft beer!)</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <img src="drink-sake.png" alt="Nihonshu" onerror="this.src='https://placehold.co/200x200/0f172a/38bdf8?text=Nihonshu'" class="w-32 h-32 rounded-full object-cover shrink-0 border-4 border-slate-800">
+                    <div class="space-y-3 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-white">Nihonshu (Sake) <span class="block text-sm text-sky-400 mt-1">日本酒</span></h3>
+                        <p class="lang-en">Fermented rice wine. Can be enjoyed crisp and cold (Reishu) or warmly comforting (Atsukan) depending on the season.</p>
+                        <p class="lang-ja">お米から作られる醸造酒。季節に合わせて、キリッと冷やした「冷酒」や、温かい「熱燗」で楽しみます。</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <img src="drink-shochu.png" alt="Shochu" onerror="this.src='https://placehold.co/200x200/0f172a/38bdf8?text=Shochu'" class="w-32 h-32 rounded-full object-cover shrink-0 border-4 border-slate-800">
+                    <div class="space-y-3 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-white">Shochu (Imo / Mugi) <span class="block text-sm text-sky-400 mt-1">焼酎（芋・麦）</span></h3>
+                        <p class="lang-en">A distilled spirit. "Imo" (sweet potato) has a rich, earthy aroma, while "Mugi" (barley) is clean and easy to drink. Often mixed with water, ice, or soda.</p>
+                        <p class="lang-ja">日本の蒸留酒。香りの強い「芋」と、スッキリ飲みやすい「麦」が代表的。ロック、水割り、炭酸割り、何でもOK。</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <img src="drink-umeshu.png" alt="Umeshu" onerror="this.src='https://placehold.co/200x200/0f172a/38bdf8?text=Umeshu'" class="w-32 h-32 rounded-full object-cover shrink-0 border-4 border-slate-800">
+                    <div class="space-y-3 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-white">Umeshu (Plum Wine) <span class="block text-sm text-sky-400 mt-1">梅酒</span></h3>
+                        <p class="lang-en">A sweet, fruity liqueur made by steeping Japanese plums in alcohol and sugar. Very popular mixed with soda (Umeshu Soda).</p>
+                        <p class="lang-ja">梅をアルコールと砂糖に漬け込んだ甘くてフルーティーなお酒。ロックまたは炭酸で割る「梅酒ソーダ」が大人気です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 text-xs py-8 text-center mt-12">
+        <p>&copy; 2026 Izakaya Connect. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
