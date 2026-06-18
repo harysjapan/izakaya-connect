@@ -9,8 +9,7 @@
         gtag('config', 'G-JVHWDYJCCW');
     </script>
 
- <!-- Meta Pixel Code -->
-<script>
+ <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -19,15 +18,17 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1353357180082335');
+
+// 💡 2つのデータセットIDを並べて初期化します
+fbq('init', '1353357180082335'); // 日本人ガイド用
+fbq('init', '2216261249135772'); // 外国人旅行者用
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-    <meta charset="UTF-8">
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"/>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2216261249135772&ev=PageView&noscript=1"/>
+</noscript>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izakaya Connect - Local Matchmaking Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -338,10 +339,10 @@ src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"
                    <div class="space-y-2 pt-2 border-t border-slate-800">
                        <h4 class="font-bold text-white text-sm">Payment Process & Safety</h4>
                        <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside leading-relaxed">
-                            <li>After a match is confirmed, we will email you a secure Stripe link for the $20 matching fee and a quick ID verification (Passport required).</li>
-                            <li><strong>For safety, your ID is verified directly by Stripe Identity. We never store your passport images.</strong></li>
-                            <li>Once completed, contact information will be shared between you and your guide.</li>
-                            <li>You are responsible for paying the guide's table charge, food, and drinks directly at the venue.</li>
+                           <li>After a match is confirmed, we will email you a secure Stripe link for the $20 matching fee and a quick ID verification (Passport required).</li>
+                           <li><strong>For safety, your ID is verified directly by Stripe Identity. We never store your passport images.</strong></li>
+                           <li>Once completed, contact information will be shared between you and your guide.</li>
+                           <li>You are responsible for paying the guide's table charge, food, and drinks directly at the venue.</li>
                        </ul>
                   </div>
 
@@ -515,7 +516,7 @@ src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"
                         <div class="absolute -top-3 -left-3 bg-emerald-600 text-white text-xs font-black w-7 h-7 rounded-lg flex items-center justify-center shadow-lg">4</div>
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500"><i data-lucide="beer" class="w-5 h-5"></i></div>
                         <h3 class="font-bold text-base text-white">合流・居酒屋へ！</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">当日は指定の場所で合流！一緒にお店へ向かい、日本の美味しい居酒屋文化を共有しながら英語で乾杯しましょう！</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">当日は指定 of 場所で合流！一緒にお店へ向かい、日本の美味しい居酒屋文化を共有しながら英語で乾杯しましょう！</p>
                     </div>
                     <div class="pt-4 border-t border-slate-900 flex justify-center">
                         <img src="images/ja-step4.png" alt="白人男性旅行客と日本人ガイドの合流" class="h-32 md:h-40 w-auto object-contain mx-auto">
@@ -658,7 +659,7 @@ src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"
             </div>
         </section>
 
-　　　　<section id="disclaimer-ja" class="max-w-5xl mx-auto px-4 py-16 border-t border-slate-800">
+    <section id="disclaimer-ja" class="max-w-5xl mx-auto px-4 py-16 border-t border-slate-800">
     <div class="space-y-8">
         <div class="text-center space-y-2">
             <span class="text-emerald-500 text-xs font-bold uppercase tracking-wider">Terms & Disclaimer</span>
@@ -699,7 +700,7 @@ src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"
                 <h4 class="font-bold text-white text-base flex items-center gap-2">
                     <i data-lucide="info" class="w-4 h-4 text-emerald-500"></i> 5. 運営の免責事項
                 </h4>
-                <p>Izakaya Connectは旅行客とガイドのマッチングプラットフォームであり、ガイド中およびガイド後に発生した参加者間のトラブル、怪我、事故、体調不良（急性アルコール中毒や食中毒等）、盗難、紛失、物損、その他の損害について、**運営は一切の法的責任や損害賠償責任を負わないものとします。** 全て自己責任のもとでのご参加をお願いいたします。</p>
+                <p>Izakaya Connectは旅行客とガイドのマッチングプラットフォームであり、ガイド中およびガイド後に発生した参加者間のトラブル、怪我、事故、体調不良（急性アルコール中毒や食中毒等）、盗難、紛失、物損、その他の損害について、**運営は一切の法的責任や損害賠償責任を负わないものとします。** 全て自己責任のもとでのご参加をお願いいたします。</p>
             </div>
         </div>
     </div>
@@ -818,8 +819,8 @@ src="https://www.facebook.com/tr?id=1353357180082335&ev=PageView&noscript=1"
                 gtag('event', 'click_cta', { 'cta_name': actionName });
             }
 
-            // 💡 【新規追加】Meta Pixel Custom Event
-            // ユーザーが「Find a Local Guide Now」または「無料ガイド登録する」を押した瞬間をMetaに送信します
+            // Meta Pixel Custom Event
+            // 💡 initされたすべてのデータセット（日本人用・外国人用両方）にカスタムイベントが自動送信されます
             if (typeof fbq === 'function') {
                 fbq('trackCustom', 'ClickRegistrationButton', { button_name: actionName });
             }
